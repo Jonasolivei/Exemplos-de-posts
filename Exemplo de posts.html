@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+     <meta charset="UTF-8">
+    <title>Exemplo de Posts</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+ <body>
+
+    <h1>Exemplo de Posts</h1>
+    <div id="posts"></div>
+    <script src="script.js"></script>
+    
+<script>
+        let posts = [
+  {titulo: 'Post 1', conteudo: 'Conteúdo do post 1'},
+  {titulo: 'Post 2', conteudo: 'Conteúdo do post 2'},
+  {titulo: 'Post 3', conteudo: 'Conteúdo do post 3'},
+];
+
+let divPosts = document.getElementById('posts');
+
+posts.forEach(post => {
+  let htmlPost = `<div class="post">
+                    <h2>${post.titulo}</h2>
+                    <p>${post.conteudo}</p>
+                  </div>`;
+  divPosts.innerHTML += htmlPost;
+});
+    </script>
+
+<style>
+        .post {
+  border: 1px solid rgb(184, 27, 27);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+    </style>
+  </body>
+</html>
